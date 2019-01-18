@@ -1,0 +1,72 @@
+<style lang="less">
+.recommend_item {
+  padding: 22rpx;
+  border-bottom: 4rpx solid #f7f7f7;
+  text-align: left;
+}
+.list_title {
+  color: #818181;
+  border: 1rpx solid #d3d3d3;
+  height: 40rpx;
+  padding: 0rpx 4rpx;
+  border-radius: 6rpx;
+  margin-bottom: -12rpx;
+  float: left;
+}
+.recommend_item .flo_l {
+  font-size: 30rpx;
+}
+</style>
+
+<template>
+  <!--<view>
+    <view
+      class="recommend_item"
+      wx:for="{{classmateList}}"
+      wx:for-item="item"
+      wx:for-index="index"
+      wx:key="nameList"
+    >
+      <view class="flo_l" style="width: 80%">
+        <view class="list_title">
+          <view>{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+  </view>-->
+  <view name="tem_recommend">
+    <view
+      class="recommend_item"
+      wx:for="{{classmateList}}"
+      wx:for-item="item"
+      wx:for-index="index"
+      wx:key="nameList"
+    >
+      <view class="flo_l">{{item.name}}</view>
+      <!--<view class="list_title" wx:if="{{item.type == 'SHARE'}}">共享</view>
+      <view class="list_title" wx:else>机构</view>
+      <view class="ellipsis_2 font_26 color-666" style="width: 100%">简介：{{item.intro}}</view>-->
+    </view>
+    <view class="clearfloat"></view>
+  </view>
+</template>
+
+
+<script>
+Page({
+  data: {
+    classmateList: [
+      {
+        name: '易生生教育'
+      },
+      {
+        name: '起航教育'
+      },
+      {
+        name: '起航教育'
+      }
+    ]
+  }
+});
+</script>
+
